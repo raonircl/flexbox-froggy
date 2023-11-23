@@ -1,0 +1,212 @@
+/* Usar justify-content novamente para ajudar esses sapos a chegar aos seus límpidos. 
+Lembre-se que esta propriedade CSS alinha os itens horizontalmente e aceita os seguintes valores:
+
+flex-start: Os itens se alinham ao lado esquerdo do contêiner.
+flex-end: Os itens se alinham ao lado direito do contêiner.
+center: Os itens se alinham no centro do contêiner.
+space-between: Os itens são exibidos com espaçamento igual entre eles.
+space-around: Os itens são exibidos com espaçamento igual ao redor deles. */
+
+#pond {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#pond {
+    display: flex;
+    justify-content: center;
+}
+
+#pond {
+    display: flex;
+    justify-content: space-around;
+}
+
+#pond {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Agora use align-items para ajudar os sapos a chegar ao fundo da lagoa. 
+Esta propriedade CSS alinha itens verticalmente e aceita os seguintes valores:
+
+flex-start: Os itens se alinham ao topo do contêiner.
+flex-end: Os itens se alinham ao fundo do contêiner.
+center: Os itens se alinham no centro vertical do contêiner.
+baseline: Itens exibidos na linha de base do contêiner.
+stretch: Os itens são esticados para caber no recipiente. */
+
+#pond {
+    display: flex;
+    align-items: flex-end;
+}
+
+#pond {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pond {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+/* Os sapos precisam entrar na mesma ordem que seus lírios usando flex-direction. 
+Esta propriedade CSS define a direção em que os itens são colocados no contêiner e aceita os seguintes valores:
+
+row: Os itens são colocados da mesma forma que a direção do texto.
+row-reverse: Os itens são colocados opostos à direção do texto.
+column: Os itens são colocados de cima para baixo.
+column-reverse: Os itens são colocados de baixo para cima. */
+
+#pond {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#pond {
+    display: flex;
+    flex-direction: column;
+}
+
+#pond {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+#pond {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#pond {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
+#pond {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* Às vezes, inverter a ordem da linha ou coluna de um contêiner não é suficiente. 
+Nesses casos, podemos aplicar o order propriedade para itens individuais. 
+Por padrão, os itens têm um valor de 0, 
+mas podemos usar essa propriedade para também defini-la 
+como um valor inteiro positivo ou negativo (-2, -1, 0, 1, 2).
+
+Use o order propriedade para reordenar os sapos de acordo com seus límpidos. */
+
+#pond {
+    display: flex;
+}
+
+.amarelo {
+    order: 1;
+}
+
+#pond {
+    display: flex;
+}
+
+.red {
+    order: -1;
+}
+
+#pond {
+    display: flex;
+    align-items: flex-start;
+}
+
+.yellow {
+    align-self: flex-end;
+}
+
+#pond {
+    display: flex;
+    align-items: flex-start;
+}
+
+.yellow {
+    order: 2;
+    align-self: flex-end;
+}
+
+/* Oh não! Os sapos são todos espremidos em uma única fileira de límpidos. 
+Espalhe-os usando o flex-wrap propriedade, que aceita os seguintes valores:
+
+nowrap: Cada item é ajustado a uma única linha.
+wrap: Os itens se envolvem em linhas adicionais.
+wrap-reverse: Os itens se envolvem em linhas adicionais ao contrário. */
+
+/* As duas propriedades flex-direction e flex-wrap são usados tão frequentemente juntos 
+que a propriedade de taquigrafia flex-flow foi criado para combiná-los. 
+Esta propriedade abreviada aceita o valor das duas propriedades separadas por um espaço.
+
+Por exemplo, você pode usar flex-flow: row wrap para definir linhas e envolvê-las.
+
+Tente usar flex-flow para repetir o nível anterior. */
+
+#pond {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#pond {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#pond {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/* Os sapos estão espalhados por toda a lagoa, mas os límpidos estão agrupados no topo. 
+Você pode usar align-content para definir como várias linhas são espaçadas umas às outras. 
+Esta propriedade tem os seguintes valores:
+
+flex-start: As linhas são embaladas na parte superior do recipiente.
+flex-end: As linhas são embaladas na parte inferior do recipiente.
+center: As linhas são embaladas no centro vertical do recipiente.
+space-between: As linhas são exibidas com espaçamento igual entre elas.
+space-around: As linhas são exibidas com espaçamento igual ao redor delas.
+stretch: As linhas são esticadas para caber o recipiente.
+Isso pode ser confuso, mas align-content determina o espaçamento entre linhas, 
+enquanto align-items determina como os itens como um todo estão alinhados dentro do contêiner. 
+  Quando há apenas uma linha, align-content não tem efeito. */
+
+#pond {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+#pond {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+#pond {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-content: center;
+}
+
+#pond {
+    display: flex;
+    flex-flow: column-reverse wrap-reverse;
+    align-content: space-between;
+    justify-content: center;
+
+}
